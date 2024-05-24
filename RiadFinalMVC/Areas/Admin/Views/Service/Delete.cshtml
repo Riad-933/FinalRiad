@@ -1,0 +1,29 @@
+﻿@using Core.Models
+@model Service
+
+<div class="container">
+    <div class="row">
+        <div class="col-3 mb-4">
+            <form asp-action="DeletePost" method="post">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input asp-for="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">description</label>
+                    <input asp-for="Description" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="Description"></span>
+                </div>
+                <div class="mb-3 form-check">
+                    <label for="exampleInputEmail1" class="form-label">imageurl</label>
+                    <input asp-for="ImageUrl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="ImageUrl"></span>
+                </div>
+                <a asp-action="index" asp-controller="service" class="btn btn-outline-info">Go Back</a>
+                <button type="submit" class="btn btn-outline-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
